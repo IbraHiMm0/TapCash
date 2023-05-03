@@ -1,11 +1,11 @@
-import 'package:demo/presentation/resources/color_manager.dart';
+import 'package:demo/Component/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 
-import '../resources/styles_manager.dart';
-import '../resources/values_manager.dart';
+import 'package:demo/Component/resources/styles_manager.dart';
+import 'package:demo/Component/resources/values_manager.dart';
 
 class customField extends StatelessWidget {
-   customField({this.hintText,this.onChanged,required this.icon,this.obs=false,});
+   customField({super.key, this.hintText,this.onChanged,required this.icon,this.obs=false,});
 
     String? hintText;
     Function(String)? onChanged;
@@ -21,6 +21,7 @@ class customField extends StatelessWidget {
         if(value!.isEmpty){
           return 'Phone Number is Required';
         }
+        return null;
       },
       style:  getBoldStyle(
         color: ColorManager.grey2,

@@ -1,10 +1,10 @@
-import 'package:demo/presentation/resources/styles_manager.dart';
-import 'package:demo/presentation/resources/values_manager.dart';
+import 'package:demo/Component/resources/styles_manager.dart';
+import 'package:demo/Component/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../resources/assets_manager.dart';
-import '../resources/color_manager.dart';
-import '../resources/routes_manager.dart';
+import 'package:demo/Component/resources/assets_manager.dart';
+import 'package:demo/Component/resources/color_manager.dart';
+import 'package:demo/Component/resources/routes_manager.dart';
 
 class BoardingModel {
   final String image;
@@ -27,20 +27,21 @@ class OnBoardingView extends StatefulWidget {
 
 class _OnBoardingViewState extends State<OnBoardingView> {
   bool isLast = false;
-  String text='Next';
+  String text = 'Next';
+
   void changeText() {
-      setState(() {
-        text='Get Started';
-      });
-
-
+    setState(() {
+      text = 'Get Started';
+    });
   }
+
   void submit() {
     Navigator.pushReplacementNamed(context, Routes.loginRoute);
   }
 
   var boardController = PageController();
 
+// To put pages
   List<BoardingModel> boarding = [
     BoardingModel(
       title: 'Need MasterCard Now?',
@@ -101,7 +102,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                     } else {
                       setState(() {
                         isLast = false;
-                        text='Next';
+                        text = 'Next';
                       });
                     }
                   },
