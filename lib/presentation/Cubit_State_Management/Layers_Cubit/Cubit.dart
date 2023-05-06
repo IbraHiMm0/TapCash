@@ -6,10 +6,10 @@ import 'package:demo/presentation/Screen/Settings/Settings.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class CardCubit extends Cubit<CardState> {
-  CardCubit() : super(InitCardState());
+class LayerCubit extends Cubit<LayerState> {
+  LayerCubit() : super(InitLayerState());
 
-  static CardCubit get(context) => BlocProvider.of(context);
+  static LayerCubit get(context) => BlocProvider.of(context);
   int currentIndex = 0;
   //Screens Button Nav Bar
   List<Widget> screens = const [Home(), Analytics(), CardScreen(), Settings()];
@@ -17,5 +17,21 @@ class CardCubit extends Cubit<CardState> {
   void changeIconBottonNav(index) {
     currentIndex = index;
     emit(changeIconBottonNavState());
+  }
+  // to change colors of Buttons in history screen
+  bool ButtonAll=true;
+  bool ButtonIncome=false;
+  bool ButtonOutcome=false;
+  void ChangeColorButtonAll(){
+    ButtonAll=true;
+    emit(ChangeColorButtonAllState());
+  }
+  void ChangeColorButtonIncome(){
+    ButtonIncome=true;
+    emit(ChangeColorButtonIncomeState());
+  }
+  void ChangeColorButtonOutcome(){
+    ButtonOutcome=true;
+    emit(ChangeColorButtonOutcomeState());
   }
 }

@@ -12,8 +12,8 @@ class Layers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => CardCubit(),
-      child: BlocConsumer<CardCubit, CardState>(
+      create: (context) => LayerCubit(),
+      child: BlocConsumer<LayerCubit, LayerState>(
           builder: (context, state) {
             GlobalKey<CurvedNavigationBarState> bottomNavigationKey =
                 GlobalKey();
@@ -21,7 +21,7 @@ class Layers extends StatelessWidget {
             return Scaffold(
               bottomNavigationBar: CurvedNavigationBar(
                 key: bottomNavigationKey,
-                index: CardCubit.get(context).currentIndex,
+                index: LayerCubit.get(context).currentIndex,
                 height: 45.0,
                 items: const <Widget>[
                   Icon(
@@ -43,7 +43,7 @@ class Layers extends StatelessWidget {
                 animationCurve: Curves.bounceIn,
                 animationDuration: const Duration(milliseconds: 600),
                 onTap: (index) {
-                  CardCubit.get(context).changeIconBottonNav(index);
+                  LayerCubit.get(context).changeIconBottonNav(index);
                 },
                 letIndexChange: (index) => true,
               ),
@@ -84,8 +84,8 @@ class Layers extends StatelessWidget {
               //         label: 'Settings'),
               //   ],
               // ),
-              body: CardCubit.get(context)
-                  .screens[CardCubit.get(context).currentIndex],
+              body: LayerCubit.get(context)
+                  .screens[LayerCubit.get(context).currentIndex],
             );
           },
           listener: (context, state) {}),

@@ -1,6 +1,9 @@
 
+import 'package:demo/presentation/History/History.dart';
+import 'package:demo/presentation/Notifications/Notifications.dart';
 import 'package:demo/presentation/Screen/Add_Monay/AddMonay.dart';
 import 'package:demo/presentation/Screen/Card%20info/Card%20info.dart';
+import 'package:demo/presentation/Screen/Home/Home.dart';
 import 'package:demo/presentation/Screen/Layers/Layers.dart';
 import 'package:demo/presentation/Screen/Personal%20information/Personal%20information.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-     home:const CardInfo(),
+     home:const Layers(),
       theme: getApplicationTheme(),
     );
   }

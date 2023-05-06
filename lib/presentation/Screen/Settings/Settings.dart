@@ -1,6 +1,7 @@
 import 'package:demo/Component/resources/assets_manager.dart';
 import 'package:demo/Component/resources/values_manager.dart';
 import 'package:demo/Shared/Style/icon_broken.dart';
+import 'package:demo/presentation/Notifications/Notifications.dart';
 import 'package:demo/presentation/Screen/Personal%20information/Personal%20information.dart';
 import 'package:flutter/material.dart';
 
@@ -68,7 +69,9 @@ class Settings extends StatelessWidget {
                       height: 10,
                     ),
                     InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=>const Notifications()));
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Row(

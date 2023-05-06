@@ -1,3 +1,4 @@
+import 'package:demo/presentation/History/History.dart';
 import 'package:demo/presentation/Screen/Add_Monay/AddMonay.dart';
 import 'package:flutter/material.dart';
 import 'package:demo/Shared/Style/icon_broken.dart';
@@ -147,8 +148,9 @@ class Home extends StatelessWidget {
                             ],
                           ),
                         ),
-                        const Align(
-                          alignment: Alignment.topRight,
+                        const Positioned(
+                         bottom: 70,
+                          left: 279,
                           child: Padding(
                             padding: EdgeInsets.only(bottom: 10),
                             child: Image(
@@ -175,128 +177,118 @@ class Home extends StatelessWidget {
                       color: HexColor('#FF7A00'),
                       child: Row(
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const Icon(
-                                      Icons.arrow_downward_sharp,
-                                      color: Colors.white,
-                                      size: 50,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(8.0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const Text(
-                                            'Received',
+                          Expanded(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                const Icon(
+                                  Icons.arrow_downward_sharp,
+                                  color: Colors.white,
+                                  size: 50,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Text(
+                                        'Received',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.white),
+                                      ),
+
+                                      Row(
+                                          children: const [
+                                            Text(
+                                              '4 K',
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Colors.white),
+                                            ),
+                                            SizedBox(
+                                              width: 5,
+                                            ),
+                                            Text(
+                                              'EGP',
+                                              style: TextStyle(
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.w500,
+                                                  color: Colors.white),
+                                            ),
+                                          ],
+                                        ),
+
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              height: 60,
+                              width: 5,
+                              color: Colors.white,
+                            ),
+                          ),
+                          Expanded(
+                            child: Row(
+
+                              children: [
+                                const Icon(
+                                  Icons.arrow_upward_outlined,
+                                  color: Colors.white,
+                                  size: 50,
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(0),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                    CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      const Text(
+                                        'send',
+                                        style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w500,
+                                            color: Colors.white),
+                                      ),
+                                      const SizedBox(
+                                        height: 2,
+                                      ),
+                                      Row(
+                                        children: const [
+                                          Text(
+                                            '1.5 K',
                                             style: TextStyle(
-                                                fontSize: 15,
+                                                fontSize: 20,
                                                 fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
-                                          const SizedBox(
-                                            height: 2,
+                                          SizedBox(
+                                            width: 5,
                                           ),
-                                          Row(
-                                            children: const [
-                                              Text(
-                                                '4000.00',
-                                                style: TextStyle(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Colors.white),
-                                              ),
-                                              SizedBox(
-                                                width: 5,
-                                              ),
-                                              Text(
-                                                'EGP',
-                                                style: TextStyle(
-                                                    fontSize: 11,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Colors.white),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            height: 60,
-                            width: 5,
-                            color: Colors.white,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const Icon(
-                                      Icons.arrow_upward_outlined,
-                                      color: Colors.white,
-                                      size: 50,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.all(0),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const Text(
-                                            'send',
+                                          Text(
+                                            'EGP',
                                             style: TextStyle(
-                                                fontSize: 15,
+                                                fontSize: 11,
                                                 fontWeight: FontWeight.w500,
                                                 color: Colors.white),
                                           ),
-                                          const SizedBox(
-                                            height: 2,
-                                          ),
-                                          Row(
-                                            children: const [
-                                              Text(
-                                                '1500.00',
-                                                style: TextStyle(
-                                                    fontSize: 20,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Colors.white),
-                                              ),
-                                              SizedBox(
-                                                width: 5,
-                                              ),
-                                              Text(
-                                                'EGP',
-                                                style: TextStyle(
-                                                    fontSize: 11,
-                                                    fontWeight: FontWeight.w500,
-                                                    color: Colors.white),
-                                              ),
-                                            ],
-                                          ),
                                         ],
                                       ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ],
                       )),
@@ -385,7 +377,9 @@ class Home extends StatelessWidget {
                                 height: 77,
                                 width: 77,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const History()));
+                                  },
                                   child: const Image(
                                       image: AssetImage(
                                           ImageAssets.onBoardingLogo9),

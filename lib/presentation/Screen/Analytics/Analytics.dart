@@ -5,8 +5,19 @@ class Analytics extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const  Center(
-      child: Text("Analytics"),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Spending Analytics ',style: TextStyle(
+          fontSize: 22,
+          fontWeight: FontWeight.w700,
+          color: Colors.black
+        ),),
+      ),
+      body: Column(
+        children: const [
+
+        ],
+      ),
     );
   }
 }
