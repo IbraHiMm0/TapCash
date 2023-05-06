@@ -1,12 +1,12 @@
-import 'package:demo/presentation/resources/assets_manager.dart';
-import 'package:demo/presentation/resources/color_manager.dart';
-import 'package:demo/presentation/resources/values_manager.dart';
+import 'package:demo/Component/resources/assets_manager.dart';
+import 'package:demo/Component/resources/color_manager.dart';
+import 'package:demo/Component/resources/values_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../components/custom-TextField.dart';
 import '../components/customButton.dart';
-import '../resources/routes_manager.dart';
-import '../resources/styles_manager.dart';
+import 'package:demo/Component/resources/routes_manager.dart';
+import 'package:demo/Component/resources/styles_manager.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({Key? key}) : super(key: key);

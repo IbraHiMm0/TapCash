@@ -1,11 +1,11 @@
-import 'package:demo/presentation/forgot_password/forgot_password_view.dart';
-import 'package:demo/presentation/login/login_view.dart';
-import 'package:demo/presentation/main/main_view.dart';
-import 'package:demo/presentation/onboarding/onboarding_view.dart';
-import 'package:demo/presentation/register/register_view.dart';
-import 'package:demo/presentation/resources/string_manager.dart';
-import 'package:demo/presentation/splash/splash_view.dart';
-import 'package:demo/presentation/store_details/store_details_view.dart';
+import 'package:demo/presentation/Screen/forgot_password/forgot_password_view.dart';
+import 'package:demo/presentation/Screen/login/login_view.dart';
+import 'package:demo/presentation/Screen/main/main_view.dart';
+import 'package:demo/presentation/Screen/onboarding/onboarding_view.dart';
+import 'package:demo/presentation/Screen/register/register_view.dart';
+import 'package:demo/Component/resources/string_manager.dart';
+import 'package:demo/presentation/Screen/splash/splash_view.dart';
+import 'package:demo/presentation/Screen/store_details/store_details_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -16,6 +16,7 @@ class Routes {
   static const String onboardingRoute = "/onBoarding";
   static const String mainRoute = "/main";
   static const String storeDetailsRoute = "/storeDetails";
+  static const String CardRoute = "/CardOptions";
 }
 
 class RouteGenerator {
@@ -35,6 +36,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) =>  const OnBoardingView());
       case Routes.storeDetailsRoute:
         return MaterialPageRoute(builder: (_) => const StoreDetailsView());
+      case Routes.CardRoute:
+        return MaterialPageRoute(builder: (_) => const Card());
       default:
         return unDefinedRoute();
     }

@@ -1,28 +1,30 @@
-import 'package:demo/presentation/resources/routes_manager.dart';
-import 'package:demo/presentation/resources/theme_manager.dart';
-import 'package:flutter/material.dart';
+// import 'package:demo/presentation/Screen/resources/routes_manager.dart';
+// import 'package:demo/presentation/Screen/resources/theme_manager.dart';
+// import 'package:flutter/material.dart';
 
-class MyApp extends StatefulWidget {
+// class MyApp extends StatelessWidget {
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//      home: Card(),
+//       theme: getApplicationTheme(),
+//     );
+//   }
+//
+//
+// }
 
-  MyApp._internal();
-
-  static final MyApp _instance =
-      MyApp._internal();
-  factory MyApp() => _instance;
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: RouteGenerator.getRoute,
-      initialRoute: Routes.splashRoute,
-      theme: getApplicationTheme(),
-    );
-  }
-}
+// class _MyAppState extends State<MyApp> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       onGenerateRoute: RouteGenerator.getRoute,
+//       initialRoute: Routes.loginRoute,
+//       theme: getApplicationTheme(),
+//     );
+//   }
+// }
 
