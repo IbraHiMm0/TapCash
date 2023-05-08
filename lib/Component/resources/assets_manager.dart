@@ -29,4 +29,5 @@ class ImageAssets{
   static const String onBoardingLogo27 ="$imagePath/img_27.png";
   static const String onBoardingLogo28 ="$imagePath/img_28.png";
   static const String onBoardingLogo30 ="$imagePath/img_30.png";
+  static const String onBoardingLogo31 ="$imagePath/img_31.png";
 }
