@@ -9,7 +9,7 @@ class DioHelper
     print('dioHelper Initialized');
     dio = Dio(
         BaseOptions(
-          baseUrl:'https://student.valuxapps.com/api/',
+          baseUrl:'https://tap-cash-ti5d.onrender.com',
           receiveDataWhenStatusError: true,
         ));
   }
